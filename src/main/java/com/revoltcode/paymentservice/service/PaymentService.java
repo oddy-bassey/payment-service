@@ -25,4 +25,8 @@ public class PaymentService {
         //api should be third party payment gateway
         return new Random().nextBoolean()? "success" : "false";
     }
+
+    public Payment findByOrderId(int orderId){
+        return paymentRepository.findByOrderId(orderId);
+    }
 }
